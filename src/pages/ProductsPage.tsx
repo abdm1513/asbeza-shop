@@ -195,8 +195,8 @@ export default function ProductsPage() {
         </div>
         
         {productsLoading && products.length === 0 ? (
-        //   <ProductGrid products={[]} isLoading={true} />
-        // ) : products.length > 0 ? (
+          <ProductGrid products={[]} isLoading={true} />
+        ) : products.length > 0 ? (
           <ProductGrid products={products} />
         ) : (
           <EmptyState 
