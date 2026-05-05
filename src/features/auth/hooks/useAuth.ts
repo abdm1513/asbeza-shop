@@ -3,6 +3,7 @@ import { useAuthStore } from '../store/authStore'
 import { authService } from '../services/authService'
 import { useCartStore } from '../../cart/store/cartStore'
 import toast from 'react-hot-toast'
+import { User } from '../types/auth'
 
 export function useAuth() {
   const { user, isLoading, error, isAuthenticated, setUser, setLoading, setError, logout: logoutStore } = useAuthStore()
@@ -59,7 +60,7 @@ export function useAuth() {
     }
   }, [setLoading, logoutStore, clearCart])
 
-  const updateProfile = useCallback(async (data: Partial<typeof user>) => {
+  const updateProfile = useCallback(async (data: Partial<User>) => {
     if (!user) throw new Error('No user logged in')
     setLoading(true)
     try {
