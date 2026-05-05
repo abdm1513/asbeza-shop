@@ -1,0 +1,6 @@
+export { useAuth } from './hooks/useAuth'
+export { useAuthStore } from './store/authStore'
+export { AuthDialog } from './components/AuthDialog'
+export { LoginForm } from './components/LoginForm'
+export { RegisterForm } from './components/RegisterForm'
+export type { User, LoginCredentials, RegisterData } from './types/auth'
